@@ -1,0 +1,28 @@
+.investors {
+    padding-bottom: 50px;
+    &__container {
+    }
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+    &__wrp {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    &__list {
+        display: flex;
+        padding-left: 100%;
+        animation: scroll 20s infinite linear ;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 84px
+        }
+    }
+}

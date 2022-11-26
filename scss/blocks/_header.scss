@@ -1,4 +1,45 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    &__container {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding-top: rem(36);
+       padding-bottom: rem(36);
+    }
+    &__logo {
+    }
+    &__menu {
+    }
+}
 
+.menu {
+    &__body {
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: rem(47);
+            @media (max-width:$mobileSmall){
+                margin-right: rem(31);
+            }
+        }
+    }
+    &__link {
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: $hover-color;
+            }
+        }
+    }
+}
 
 
 //========================================================================================================================================================

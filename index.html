@@ -9,6 +9,96 @@
     <title>NOVEX</title>
   </head>
   <body>
-    <h1 class="title">Hello</h1>
+    <header class="header">
+      <div class="header__container container">
+        <a href="/" class="header__logo">
+          <img src="img/icons/logo.svg" alt="novex">
+        </a>
+        <div class="header__menu menu">
+          <!-- <button type="button" class="menu__icon icon-menu"><span></span></button> -->
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="" class="menu__link">Blog</a>
+              </li>
+              <li class="menu__item">
+                <a href="" class="menu__link">Careers</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__container container">
+        <div class="hero__information">
+          <h1 class="hero__title title">The Reactive Backend for your Reactive Apps</h1>
+          <h2 class="hero__subtitle subtitle">We are going to launch our website very soon.<br> Get notify when it’s ready
+          </h2>
+          <form class="hero__form form">
+            <input autocomplete="off"
+             type="email" 
+             data-error="Ошибка" 
+             placeholder="Email" 
+             class="form__input input"
+             required
+             minlength="4"
+             maxlength="30">
+            <button type="submit" class="form__button button button--big">Notify me</button>
+          </form>
+        </div>
+        <a href="#" class="hero__dropdown">
+          <svg class="hero__icon-dawn">
+            <use xlink:href="#arrow-down"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="investors">
+      <div class="investors__container container">
+        <h2 class="investors__title title title--small">Our investors</h2>
+        <h3 class="investors__subtitle subtitle subtitle">Proudly backed by...</h3>
+      </div>
+      <div class="investors__wrp">
+        <ul class="investors__list">
+          <li class="investors__item">
+            <img src="/img/icons/bitbucket.svg" alt="bitbucket">
+          </li>
+          <li class="investors__item">
+            <img src="/img/icons/microsoft.svg" alt="microsoft">
+          </li>
+          <li class="investors__item">
+            <img src="/img/icons/bamboo.svg" alt="bamboo">
+          </li>
+          <li class="investors__item">
+            <img src="/img/icons/confluence.svg" alt="confluence">
+          </li>
+          <li class="investors__item">
+            <img src="/img/icons/atlassian.svg" alt="atlassian">
+          </li>
+          <li class="investors__item">
+            <img src="/img/icons/pioneer.svg" alt="pioneer">
+          </li>
+          <li class="investors__item">
+            <img src="/img/icons/stackoverflow.svg" alt="stackoverflow">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="to-try">
+      <div class="to-try__conteiner conteiner">
+        <div class="to-try__image">
+          
+        </div>
+      </div>
+    </section>
+    <!-- SVG -->
+    <svg style="display: none;">
+      <g id="arrow-down" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7007 15.1956C18.0947 15.5826 18.1004 16.2158 17.7134 16.6098L12.7134 21.7007C12.5254 21.8922 12.2683 22 12 22C11.7317 22 11.4746 21.8922 11.2866 21.7007L6.28655 16.6098C5.89956 16.2158 5.90526 15.5826 6.29929 15.1956C6.69332 14.8087 7.32646 14.8144 7.71345 15.2084L11 18.5547L11 3C11 2.44771 11.4477 2 12 2C12.5523 2 13 2.44772 13 3L13 18.5547L16.2866 15.2084C16.6735 14.8144 17.3067 14.8087 17.7007 15.1956Z"/>
+      </g>
+  </svg>
   </body>
 </html>

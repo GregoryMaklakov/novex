@@ -4,6 +4,11 @@
 		content: "#{$sym}";
 	}
 }
+//Percent
+@function percent($px, $from) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
 
 // Grids
 @mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
@@ -20,14 +25,7 @@
   line-height: $line-height;
 }
 
-// Flex
-@mixin flex($jc: flex-start, $ai: stretch, $direction: row, $wrap: nowrap) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $jc;
-  align-items: $ai;
-  flex-wrap: $wrap;
-}
+
 
 //Size - block
 @mixin size($size, $rounded: false) {
