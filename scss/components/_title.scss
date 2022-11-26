@@ -4,6 +4,12 @@
 	font-size: rem(50);
 	line-height: 120%;
 	color: #29323F;
+	@media (max-width:$mobile){
+		font-weight: 600;
+		font-size: rem(50);
+		line-height: 120%;
+		text-align: center; 
+	}
 }
 .title--small {
 	font-size: rem(38);
@@ -15,4 +21,7 @@
 	font-size: rem(16);
 	line-height: 160%;
 	color: #6E6E6E;
+	@media (max-width:$mobile){
+		text-align: center; 
+	}
 }
