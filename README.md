@@ -1,19 +1,3 @@
-# Start website development config
+# Novex 
 
-## How to use?
-<br>
-
-### Run once (if you don't have packages)
-```bash
-npm run install:globaly
-```
-
-### Development
-```bash
-npm run dev
-```
-
-### Build
-```bash
-npm run build
-```
+## First website that use starter-pack 
