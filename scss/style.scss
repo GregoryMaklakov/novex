@@ -1,9 +1,13 @@
 @use "sass:math";
 
+
+@import '../node_modules/animate.css/animate';
+
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================
 @import url(https://fonts.googleapis.com/css?family=Saira:600&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Inter:regular,500,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Arimo:regular,700&display=swap );
+@import url(https://fonts.googleapis.com/css?family=Rubik:500&display=swap);
 //&display=swap - добавить при подключении через плагин
 $fontFamily: "Saira";
 $fontSize: rem(16); // - размер шрифта по умолчанию из макета
@@ -44,10 +48,8 @@ $mobileSmall: em(479.98); // Телефоны S
 $responsiveType: 1;
 
 /*
-(i) Стили будут применяться ко 
+Стили будут применяться ко 
 всем классам содержащим *__container
-Например header__container, main__container и т.д.
-Снипет (HTML): cnt
 */
 @if ($responsiveType==1) {
 	// Отзывчивая
@@ -97,13 +99,18 @@ $responsiveType: 1;
 //=====================================================================================================================================================
 
 //Component
+@import 'components/social';
 @import 'components/title';
 @import 'components/buttons';
 @import 'components/form';
+@import 'components/link';
+@import 'components/subtitle';
 
 //Blocks
 @import 'blocks/header';
 @import 'blocks/hero';
 @import 'blocks/investors';
 @import 'blocks/to-try';
-// @import 'blocks/footer';
+@import 'blocks/bob';
+@import 'blocks/hiring';
+@import 'blocks/footer';

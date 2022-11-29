@@ -9,6 +9,17 @@
     }
 }
 
+@keyframes slide-in-right {
+    0% {
+        transform:translateX(80%);
+        opacity:0;
+    }
+    100% {
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
 @keyframes text-focus-in {
     0% {
         filter:blur(12px);
@@ -28,3 +39,4 @@
         transform: translate(-250%, 0);
       }
 }
+

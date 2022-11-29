@@ -1,0 +1,10 @@
+.subtitle {
+	font-family: 'Arimo';
+	font-weight: 400;
+	font-size: rem(16);
+	line-height: 160%;
+	color: #6E6E6E;
+	@media (max-width:$mobile){
+		text-align: center; 
+	}
+}

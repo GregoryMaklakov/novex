@@ -1,6 +1,8 @@
 .investors {
     padding-bottom: 50px;
-    padding-top: 50px;
+   @media (max-width:$mobile){
+     padding-top: 50px; 
+   }
     &__container {
     }
     &__title {

@@ -9,7 +9,6 @@
              justify-content: center; 
         }
     }
-
     &__image {
         flex: 1 1 50%;
         @media (max-width:$mobile){
@@ -23,7 +22,6 @@
     }
 
     &__information {
-        flex: 1 1 50%;
         max-width: 420px;
         @media (max-width:$mobile){
              display: flex;
@@ -47,3 +45,5 @@
        align-self: stretch;
     }
 }
+
+

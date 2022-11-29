@@ -5,13 +5,17 @@
     padding: 12px 28px;
     color: #FFFFFF;
     transition: all 0.2s ease 0s;
+    font-family: 'Arimo';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
     @media (any-hover: hover){
         &:hover{
-            background: $hover-color;
+            background: $hoverColor;
         }
     }
     &:focus {
         background: #292929;
-        box-shadow: 0px 0px 0px 1px $hover-color;
+        box-shadow: 0px 0px 0px 1px $hoverColor;
     }
 }

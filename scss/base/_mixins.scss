@@ -25,8 +25,6 @@
   line-height: $line-height;
 }
 
-
-
 //Size - block
 @mixin size($size, $rounded: false) {
   width: $size;
@@ -56,6 +54,7 @@
   display: $display;
   position: $pos;
 }
+
 // Стили для отзывчивых картинок (IBG)
 [class*="-ibg"] {
 	position: relative;
