@@ -4252,7 +4252,7 @@ h6 {
   content: "";
   display: block;
   position: absolute;
-  background: url("../img/bob-item.svg");
+  background: url("img/bob-item.svg");
 }
 .bob__description::before {
   top: -18px;

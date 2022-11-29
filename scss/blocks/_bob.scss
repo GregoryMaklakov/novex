@@ -47,7 +47,7 @@
         &::before,
         &::after {
             @include pseudo;
-            background: url('../img/bob-item.svg');
+            background: url('img/bob-item.svg');
         }
         &::before {
             top: -18px;
