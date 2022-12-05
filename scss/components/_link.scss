@@ -1,0 +1,21 @@
+.link {
+    font-family: 'Arimo';
+    font-weight: 700;
+    font-size: rem(16);
+    color: #292929;
+    transition: all 0.3s ease 0s;
+    @media (max-width:$mobile){
+        font-weight: 500;
+    }
+    @media (any-hover: hover){
+        &:hover{
+            color: $hoverColor;
+        }
+    }
+    &-footer {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: rem(16);
+        color: #000000;
+    }
+}

@@ -1,0 +1,74 @@
+.bob {
+    padding-top: 20px;
+    padding-bottom: 104px;
+    background: #FFFFFF;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image {
+        margin-bottom: rem(12);
+        position: relative;
+        @include size(120px);
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__name {
+        margin-bottom: rem(10);
+        font-family: 'Rubik';
+        font-weight: 500;
+        font-size: rem(14);
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #333333;
+        padding-bottom: 7px;
+        border-bottom: 1px solid #333333;
+        margin-bottom: rem(35);
+    }
+
+    &__description {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 160%;
+        text-align: center;
+        color: #333333;
+        max-width: rem(820);
+        position: relative;
+        &::before,
+        &::after {
+            @include pseudo;
+            background: url('img/bob-item.svg');
+        }
+        &::before {
+            top: -18px;
+            left: -18px;
+            @include size(18px);
+        }
+        &::after {
+            right: -18px;
+            transform: rotate(180deg);
+            @include size(18px);
+        }
+        @media (max-width:$mobileSmall){
+            padding-left: 50px; 
+            padding-right: 50px;
+            &::before {
+                left: 18px;
+            }
+            &::after {
+                right: 18px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,134 @@
+.hiring {
+    padding-top: 156px;
+    padding-bottom: 172px;
+    overflow: hidden;
+    @media (max-width:$mobileSmall){
+         padding-top: calc(141px - 48px); 
+    }
+    &__container {
+        position: relative;
+        padding-top: 48px;
+        padding-bottom: 58px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        //z-index: 5;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: rem(30);
+        
+    }
+
+    &__subtitle {
+        margin-bottom: 46px;
+        max-width: 486px;
+        text-align: center;
+    }
+
+    &__button {
+        padding: 16px 28px;
+    }
+
+    &__icon {
+        @include svg (13px, #FFFFFF)
+    }
+
+    &__item {
+        position: absolute;
+        img {
+            @include size(85px);
+        }
+    }
+    &__item-1 {
+        top: percent(102, 425);
+        left: 0;
+        @media (max-width:$mobileSmall){
+            left: -20px; 
+            top: 0px;
+        }
+    }
+
+    &__item-2 {
+        bottom: 0;
+        left: percent(192, 1060);
+        @media (max-width:$mobileSmall){
+            left: 24px; 
+            bottom: -48px;
+        }
+    }
+
+    &__item-3 {
+        top: percent(48, 425);
+        right: percent(159, 1060);
+        @media (max-width:$mobileSmall){
+            right: -30px;
+        }
+    }
+
+    &__item-4 {
+        right: 0;
+        bottom: percent(14, 425);
+        @media (max-width:$mobileSmall){
+            display: none;
+        }
+    }
+    &__item-5,
+    &__item-6 {
+        @include size (60px, 50%);
+        background-color: #292929;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease 0s;
+    }
+    &__item-5 {
+        top: 0;
+        left: percent(162, 1060);
+        @media (max-width:$mobileSmall){
+            top: -92px;
+            left: 30%;
+        }
+    }
+    &__item-6 {
+        bottom: percent(70, 425);
+        right: percent(192, 1060);
+        @media (max-width:$mobileSmall){
+            bottom: -82px;
+            right: 51px;
+        }
+    }
+}
+.green {
+    position: relative;
+    &::after{
+        @include pseudo;
+        @include background-image;
+        background-image: url(img/icons/green-line.svg);
+        width: 125px;
+        height: 3px;
+        bottom: -10px;
+        left: -20px;
+    }
+}
+
+
+
+
+.plus {
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover){
+        &:hover{
+            background-color: $hoverColor;
+        }
+    }
+    &:focus {
+        background-color: #292929;
+        box-shadow: 0px 0px 0px 1px $hoverColor;
+    }
+}

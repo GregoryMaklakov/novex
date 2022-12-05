@@ -1,0 +1,16 @@
+.title {
+	font-style: normal;
+	font-weight: 600;
+	font-size: rem(50);
+	line-height: 120%;
+	color: #29323F;
+	@media (max-width:$mobile){
+		font-weight: 600;
+		font-size: rem(38);
+		line-height: 120%;
+		text-align: center; 
+	}
+	&-small {
+		font-size: rem(38);
+	}
+}

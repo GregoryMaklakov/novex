@@ -5,6 +5,12 @@
 	}
 }
 
+//Percent
+@function percent($px, $from) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
+
 // Grids
 @mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
 	display: grid;
@@ -13,22 +19,33 @@
 }
 
 //Text
-@mixin text($font-size, $font-weight, $color, $line-height: initial) {
+@mixin text(
+  $font-size,
+  $font-weight,
+  $color,
+  $line-height: false,
+  $font-family: false
+) {
   font-size: $font-size;
   font-weight: $font-weight;
   color: $color;
-  line-height: $line-height;
+  @if $line-height {
+    line-height: $line-height;
+  }
+  @if map_has_key($fonts, $font-family) {
+    font-family: map_get($fonts, $font-family);
+  }
 }
 
-// Flex
+//Flex
 @mixin flex($jc: flex-start, $ai: stretch, $direction: row, $wrap: nowrap) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $jc;
-  align-items: $ai;
-  flex-wrap: $wrap;
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $jc;
+	align-items: $ai;
+	flex-wrap: $wrap;
 }
-
+  
 //Size - block
 @mixin size($size, $rounded: false) {
   width: $size;
@@ -59,6 +76,33 @@
   position: $pos;
 }
 
+//Margin-Center
+@mixin margin-center {
+	margin: {
+	  left: auto;
+	  right: auto;
+	}
+}
+
+// Стили для отзывчивых картинок (IBG)
+[class*="-ibg"] {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+[class*="-ibg_contain"] {
+	img {
+		object-fit: contain;
+	}
+}
+
+//Placeholder
 @mixin input-placeholder {
   &.placeholder {
     @content;
@@ -76,6 +120,29 @@
     @content;
   }
 }
+
+//Transition
+@mixin transition($transition-properties...) {
+	transition-property: $transition-properties;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+}
+  
+// Border solid
+@mixin border($color: transparent) {
+	border: 1px solid $color;
+}
+  
+//BGC image
+@mixin background-image($position: false) {
+background-size: cover;
+background-repeat: no-repeat;
+	@if $position {
+		background-position: $position;
+	}
+@content;
+}
+
 //========================================================================================================================================================
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
