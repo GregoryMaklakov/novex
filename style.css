@@ -4402,7 +4402,7 @@ h6 {
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/img/icons/green-line.svg);
+  background-image: url(img/icons/green-line.svg);
   width: 125px;
   height: 3px;
   bottom: -10px;
