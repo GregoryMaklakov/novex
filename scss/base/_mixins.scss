@@ -4,6 +4,7 @@
 		content: "#{$sym}";
 	}
 }
+
 //Percent
 @function percent($px, $from) {
 	$result: math.div($px, $from) * 100%;
@@ -18,13 +19,33 @@
 }
 
 //Text
-@mixin text($font-size, $font-weight, $color, $line-height: initial) {
+@mixin text(
+  $font-size,
+  $font-weight,
+  $color,
+  $line-height: false,
+  $font-family: false
+) {
   font-size: $font-size;
   font-weight: $font-weight;
   color: $color;
-  line-height: $line-height;
+  @if $line-height {
+    line-height: $line-height;
+  }
+  @if map_has_key($fonts, $font-family) {
+    font-family: map_get($fonts, $font-family);
+  }
 }
 
+//Flex
+@mixin flex($jc: flex-start, $ai: stretch, $direction: row, $wrap: nowrap) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $jc;
+	align-items: $ai;
+	flex-wrap: $wrap;
+}
+  
 //Size - block
 @mixin size($size, $rounded: false) {
   width: $size;
@@ -55,6 +76,14 @@
   position: $pos;
 }
 
+//Margin-Center
+@mixin margin-center {
+	margin: {
+	  left: auto;
+	  right: auto;
+	}
+}
+
 // Стили для отзывчивых картинок (IBG)
 [class*="-ibg"] {
 	position: relative;
@@ -73,7 +102,7 @@
 	}
 }
 
-
+//Placeholder
 @mixin input-placeholder {
   &.placeholder {
     @content;
@@ -91,6 +120,29 @@
     @content;
   }
 }
+
+//Transition
+@mixin transition($transition-properties...) {
+	transition-property: $transition-properties;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+}
+  
+// Border solid
+@mixin border($color: transparent) {
+	border: 1px solid $color;
+}
+  
+//BGC image
+@mixin background-image($position: false) {
+background-size: cover;
+background-repeat: no-repeat;
+	@if $position {
+		background-position: $position;
+	}
+@content;
+}
+
 //========================================================================================================================================================
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
